@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 600px;
+    .header{
+        background-color: #f69517;
+        padding: 15px 40px 30px;
+        color: white;
+        text-align: center;
+        .title{
+          margin: 10px;
+          font-size: 35px;
+        }
+        .jomle{
+           width: 75%;
+           border: none;
+           outline:none;
+           padding: 10px;
+           font-size: 16px;
+           float: left;
+        }
+        .btn{
+            width: 25%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background-color:#d9d9d9;
+            color: #555;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                background-color: #bbb;
+            }
+        }
+    }
+    .list{
+        overflow-y: auto;
+        max-height: 300px;
+        list-style-type: none;
+        li{
+            padding: 12px 8px 12px 40px;
+            position: relative;
+            font-size: 18px;
+            background-color: #eee;
+            cursor: pointer;
+            transition: 0.5s;
+            user-select: none;
+            &:hover{
+              background-color:rgb(205,204,204) ;
+            }
+            &:hover .trsh{
+                display: inline-block;
+            }
+            .trsh{
+                display: none;
+                position: absolute;
+                right: 20px;
+                font-size: 16px;
+                i:hover{
+                   color: red;
+                }
+            }
+            &.done{
+                background-color: #888;
+                color: #fff;
+                text-decoration: line-through;
+                &::before{
+                    content:"";
+                    width: 8px;
+                    height: 16px;
+                    position: absolute;
+                    left: 15px;
+                    top:10px;
+                    border: 2px solid #fff;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+            }
+        }  
+    }
+}

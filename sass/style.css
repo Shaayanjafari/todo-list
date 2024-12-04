@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 600px;
+}
+.container .header {
+  background-color: #f69517;
+  padding: 15px 40px 30px;
+  color: white;
+  text-align: center;
+}
+.container .header .title {
+  margin: 10px;
+  font-size: 35px;
+}
+.container .header .jomle {
+  width: 75%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  float: left;
+}
+.container .header .btn {
+  width: 25%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background-color: #d9d9d9;
+  color: #555;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container .header .btn:hover {
+  background-color: #bbb;
+}
+.container .list {
+  overflow-y: auto;
+  max-height: 300px;
+  list-style-type: none;
+}
+.container .list li {
+  padding: 12px 8px 12px 40px;
+  position: relative;
+  font-size: 18px;
+  background-color: #eee;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.container .list li:hover {
+  background-color: rgb(205, 204, 204);
+}
+.container .list li:hover .trsh {
+  display: inline-block;
+}
+.container .list li .trsh {
+  display: none;
+  position: absolute;
+  right: 20px;
+  font-size: 16px;
+}
+.container .list li .trsh i:hover {
+  color: red;
+}
+.container .list li.done {
+  background-color: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+.container .list li.done::before {
+  content: "";
+  width: 8px;
+  height: 16px;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  border: 2px solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}/*# sourceMappingURL=style.css.map */
